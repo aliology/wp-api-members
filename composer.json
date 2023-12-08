@@ -1,0 +1,36 @@
+{
+    "name": "inpsyde/members-list",
+    "description": "A WordPress plugin to display users from an external API",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Alireza Ebrahimi"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.8",
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "inpsyde/php-coding-standards": "^1.0",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpunit/phpunit": "^9.5",
+        "brain/monkey": "^2.6",
+        "mockery/mockery": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+          "MembersList\\": "includes/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs --standard=Inpsyde includes/",
+        "fix-style": "phpcbf --standard=Inpsyde includes/"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
